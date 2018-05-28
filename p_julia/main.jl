@@ -7,8 +7,7 @@ using Distributions
   x
 end
 
-function main(rvs)
-	itr = 300
+function main(rvs, itr)
 	d = Array{Array}(length(rvs))
 	for i = 1:length(rvs)
 		r = sample(bmdl(rvs[i]), SMC(itr))
@@ -42,8 +41,8 @@ function main(rvs)
 	apt
 end
 
-vals = [ 0.6, 0.2, 0.5, 0.3 ] # A1, A2, B1, B2
-println(main(vals))
+# A1, A2, B1, B2
+println(main([ 0.6, 0.2, 0.5, 0.3 ], 10000))
 
 
 #=
