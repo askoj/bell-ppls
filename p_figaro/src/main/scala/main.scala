@@ -8,9 +8,9 @@ object Test {
   ////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
-  
+
   val ch = 97
-  def Context (rvs : Array[Double],itr : Int): Array[Double] = {
+  def PTables (rvs : Array[Double],itr : Int): Array[Double] = {
     var a_c = Array[FastIf[Char]]()
     for( x <- rvs ){
       a_c :+= If(Flip(x), (0+ch).toChar, (1+ch).toChar)
@@ -51,7 +51,7 @@ object Test {
 
   def main(args: Array[String]) {
 
-    val p = Context(Array[Double](0.6, 0.2, 0.5, 0.3), 100000)
+    val p = PTables(Array[Double](0.6, 0.2, 0.5, 0.3), 100000)
 
     println(p.deep.mkString("\n"))
 
