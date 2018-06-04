@@ -5,81 +5,95 @@ from torch.autograd import Variable
 from pyro.distributions import Bernoulli
 import collections
 
-#http://pyro.ai/examples/svi_part_i.html
-#https://gist.github.com/rosinality/708209a317efe05e5131cdddf29f2ac5
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
 
-N = 10000
+def main(rvs,N):
+	d = []
+	for i in range(4):
+		d.append([int(pyro.sample(str(i), Bernoulli(Variable(torch.Tensor([rvs[i]]))))) for j in range(N)])
+	r = []
+	for a in range(2):
+		for b in range(2):
+			p = [0.0,0.0,0.0,0.0]
+			for i in range(0, N):
+				p[(d[a][i]==d[b+2][i] and -2 or 0)+(d[a][i] == 0 and 2 or 3)] += 1
+			for f in range(0, len(p)):
+				p[f] /= N
+			r.append(p)
+	return r
 
-# context
-def ct(t1, t2):
-	t3 = []
-	for i in range(0, len(t1)):
-		t3.append(str(t1[i])+str(t2[i]))
-	return collections.Counter(t3)
+p_tables = main([0.6,0.5,0.2,0.3],100000)
 
-def flip(sample_name, num_samples, bias):
-	return [int(pyro.sample(sample_name, Bernoulli(Variable(torch.Tensor([bias]))))) for i in range(num_samples)]
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
 
-# isolated probability
-def iP(name):
-	return (float(collections.Counter(name)[1])/N)
 
-# logical and
-def la(context):
-	return (float(context['11'])/N)
+p = [0.0]
+for i in range(0,4):
+	p.append(p_tables[i][0])
+	p.append(p_tables[i][2])
+	p.append(p_tables[i][3])
+	p.append(p_tables[i][1])
 
-def exp_1():
+# No Signalling
 
-	# rvs
-	A1 = 0.6
-	B1 = 0.5
-	A2 = 0.2
-	B2 = 0.3
-	A3 = 0.5
+def no_signalling_test(val1,val2,val3,val4):
+	if ((val1 + val2) == (val3 + val4)):
+		print('No signalling condition passed')
+	else:
+		print('No signalling condition failed')
 
-	# context 1
-	c1_A1_dist = flip('c1_A1', N, A1)
-	c1_B1_dist = flip('c1_B1', N, B1)
+no_signalling_test(p[1],p[2],p[5],p[6])
+no_signalling_test(p[9],p[10],p[13],p[14])
+no_signalling_test(p[1],p[3],p[9],p[11])
+no_signalling_test(p[5],p[7],p[13],p[15])
 
-	# context 2
-	c2_A2_dist = flip('c2_A2', N, A2)
-	c2_B1_dist = c1_B1_dist
+# Bell Scenario
 
-	# context 3
-	c3_A1_dist = c1_A1_dist
-	c3_B2_dist = flip('c3_B2', N, B2)
+A11 = (2 * (p[1] + p[2])) - 1
+A12 = (2 * (p[5] + p[6])) - 1
+A21 = (2 * (p[9] + p[10])) - 1
+A22 = (2 * (p[13] + p[14])) - 1
+B11 = (2 * (p[1] + p[3])) - 1
+B12 = (2 * (p[9] + p[11])) - 1
+B21 = (2 * (p[5] + p[7])) - 1
+B22 = (2 * (p[13] + p[15])) - 1
+delta = ((abs(A11) - abs(A12)) + (abs(A21) - abs(A22)) + (abs(B11) - abs(B12)) + (abs(B21) - abs(A22))) / 2
 
-	# context 4
-	c4_A3_dist = flip('c4_A3', N, A3)
-	c4_B2_dist = c3_B2_dist
+if delta >= 1:
+	print("Delta is greater than or equal to 1")
+else:
+	print("Delta is smaller than 1 so contextuality may probably occur")
 
-	# return contexts
-	c1 = ct(c1_A1_dist,c1_B1_dist)
-	c2 = ct(c2_A2_dist,c2_B1_dist) 
-	c3 = ct(c3_A1_dist,c3_B2_dist) 
-	c4 = ct(c4_A3_dist,c4_B2_dist)
+A11B11 = (p[1] + p[4]) - (p[2] + p[3])
+A12B12 = (p[5] + p[8]) - (p[6] + p[7])
+A21B21 = (p[9] + p[12]) - (p[10] + p[11])
+A22B22 = (p[13] + p[16]) - (p[14] + p[15])
 
-	# get all isolated probabilities
-	pA1 = iP(c1_A1_dist)
-	pB1 = iP(c2_B1_dist)
-	pA2 = iP(c2_A2_dist)
-	pB2 = iP(c3_B2_dist)
-	pA3 = iP(c4_A3_dist) 
+if (A11B11 + A12B12 + A21B21 - A22B22) <= 2*(1+delta):
+	print("Bell scenario test 1 passed")
+else:
+	print("Bell scenario test 1 failed")
 
-	# get 'logical and' of contexts
-	pA1_a_B1 = la(c1)
-	pA2_a_B1 = la(c2)
-	pA1_a_B2 = la(c3)
-	pA3_a_B2 = la(c4)
+if (A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta):
+	print("Bell scenario test 2 passed")
+else:
+	print("Bell scenario test 2 failed")
 
-	# bayes theorem LHS
-	bt_l = (pA1*pB1*pA2*pB2*pA3)
+if (A11B11 - A12B12 + A21B21 + A22B22) <= 2*(1+delta):
+	print("Bell scenario test 3 passed")
+else:
+	print("Bell scenario test 3 failed")
 
-	# bayes theorem RHS
-	bt_r = (pA1_a_B1*pA2_a_B1*pA1_a_B2*pA3_a_B2)/(pB1*pA1*pB2)
+if (0 - A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta):
+	print("Bell scenario test 4 passed")
+else:
+	print("Bell scenario test 4 failed")
 
-	return { 'bt_l' : bt_l, 'bt_r' : bt_r }
 
-print(exp_1())
 
-ipdb.set_trace()

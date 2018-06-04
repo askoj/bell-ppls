@@ -1,6 +1,11 @@
 using Turing
 using Distributions
 
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+
 @model bmdl(p) = begin
   z ~ Beta(1,1)
   x ~ Bernoulli(p)
@@ -20,17 +25,7 @@ function main(rvs, itr)
 			j += 1
 			pt = [0.0,0.0,0.0,0.0]
 			for i = 1:itr
-				x = d[a][i]
-				y = d[b][i]
-				if x == y && x == 0
-					pt[1] += 1
-				elseif x == y && x == 1
-					pt[2] += 1
-				elseif x != y && x == 0
-					pt[3] += 1
-				elseif x != y && x == 1
-					pt[4] += 1
-				end
+				pt[(d[a][i] == d[b][i] ? -2 : 0)+(d[a][i] == 0 ? 3 : 4)] += 1
 			end
 			for i = 1:length(pt)
 				pt[i] /= itr
@@ -42,175 +37,124 @@ function main(rvs, itr)
 end
 
 # A1, A2, B1, B2
-println(main([ 0.6, 0.2, 0.5, 0.3 ], 10000))
 
+data = main([ 0.6, 0.2, 0.5, 0.3 ], 100000)
 
-#=
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
 
-using Turing
-using Distributions: Bernoulli
-using Gadfly
-using Mamba: describe, plot
-using DualNumbers
-using ForwardDiff
-
-immutable Flat <: ContinuousUnivariateDistribution
+p = zeros(0)
+for i = 1:4
+	append!( p , data[i][1] )
+	append!( p , data[i][3] )
+	append!( p , data[i][4] )
+	append!( p , data[i][2] )
 end
 
-Distributions.rand(d::Flat) = rand()
-Distributions.logpdf{T<:Real}(d::Flat, x::T) = zero(x)
+# Set Up
 
-Distributions.minimum(d::Flat) = -Inf
-Distributions.maximum(d::Flat) = +Inf
-
-
-
-
-ta = TArray(Float64, 0)
-#a = 0
-mf(vi, sampler) = begin
-	s = Turing.assume(sampler,
-					Beta(1, 1),
-					Turing.VarName(vi, [:c_s, :s], ""),
-					vi)
-	#push!(ta, eltype(Turing.observe(sampler,Bernoulli(0.5),0,vi))[1])
-
-	a = Turing.observe(sampler,Bernoulli(0.5),0.5,vi)
-	if typeof(a) != Float64
-		#b = getindex(ForwardDiff.partials(a).values,1)
-		b = a
-		println(b)
-	end
-	#println(a)
-
-	#push! ta
-	vi
+println("P-Array")
+for i = 1:16
+	println(string("\n	p",string(i)," = ",string(p[i])))
 end
+println("\n")
 
-mf() = mf(Turing.VarInfo(), nothing, ta)
+# No Signalling
 
-chain = sample(mf, HMC(1000, 0.1, 5))
-println(ta)
-#describe(chain)
-
-#var_ = chain[:q]
-
-
-
-function ds(d)
-	a = length(find(d .== 1))/length(d)
-	[a, 1-a]
-end
-
-
-Dual{Void}
-(-Inf,
--0.8665862468851546,
-
-
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0)
-
-
-p = (rand([0,100])/100)
-	if p > 0.5
-		y ~ Bernoulli(1)
+function no_signalling_test(val1, val2, val3, val4)
+	println("\n")
+	if ((val1 + val2) == (val3 + val4))
+		println(string("	(",string(val1)," + ",string(val2),") = (",string(val3)," + ",string(val4),")"))
+		println(string("	(",string((val1+val2)),") = (",string((val3+val4)),")"))
+		println("	Signalling Test Passed!")
 	else
-		y ~ Bernoulli(0)
+		println(string("	(",string(val1)," + ",string(val2),") <> (",string(val3)," + ",string(val4),")"))
+		println(string("	(",string((val1+val2)),") <> (",string((val3+val4)),")"))
+		println("	Signalling Test Failed!")
 	end
-
-
-x = Array(Float64, 0)
-@model simple_choice(x) = begin
-	b ~ Beta(1, 1)
-    push!(x, rand(Bernoulli(0.5),1))
 end
 
-chain = sample(simple_choice(x), HMC(300, 0.1, 5))
+println("Signalling Tests")
+no_signalling_test(p[1],p[2],p[5],p[6])
+no_signalling_test(p[9],p[10],p[13],p[14])
+no_signalling_test(p[1],p[3],p[9],p[11])
+no_signalling_test(p[5],p[7],p[13],p[15])
+println("\n")
 
-const berstandata = [
-  Dict(
-  "N" => 10,
-  "y" => [0,1,0,0,0,0,0,0,0,1]
-  )
-]
+# Bell Scenario
 
-@model bermodel(y) = begin
- theta ~ Beta(1,1)
- for n = 1:length(y)
-   y[n] ~ Bernoulli(theta)
- end
- return theta
+A11 = (2 * (p[1] + p[2])) - 1
+A12 = (2 * (p[5] + p[6])) - 1
+A21 = (2 * (p[9] + p[10])) - 1
+A22 = (2 * (p[13] + p[14])) - 1
+B11 = (2 * (p[1] + p[3])) - 1
+B12 = (2 * (p[9] + p[11])) - 1
+B21 = (2 * (p[5] + p[7])) - 1
+B22 = (2 * (p[13] + p[15])) - 1
+delta = ((abs(A11) - abs(A12)) + (abs(A21) - abs(A22)) + (abs(B11) - abs(B12)) + (abs(B21) - abs(A22))) / 2
+
+println("Bell Scenario Experiment")
+println(string("\n	A11 = ",string(A11)))
+println(string("\n	A12 = ",string(A12)))
+println(string("\n	A21 = ",string(A21)))
+println(string("\n	A22 = ",string(A22)))
+println(string("\n	B11 = ",string(B11)))
+println(string("\n	B12 = ",string(B12)))
+println(string("\n	B21 = ",string(B21)))
+println(string("\n	B22 = ",string(B22)))
+println(string("\n	Delta = ",string(delta)))
+
+
+
+if delta >= 1
+	println("	Delta is greater than or equal to 1 so contextuality cannot occur\n")
+else
+	println("	Delta is smaller than 1 so contextuality may probably occur\n")
 end
 
-chain = sample(bermodel(berstandata[1]), HMC(300, 0.25, 5))
+A11B11 = (p[1] + p[4]) - (p[2] + p[3])
+A12B12 = (p[5] + p[8]) - (p[6] + p[7])
+A21B21 = (p[9] + p[12]) - (p[10] + p[11])
+A22B22 = (p[13] + p[16]) - (p[14] + p[15])
 
-describe(chain)
-
-println(berstandata)
-
-
-y = []
-@model simple_choice(y) = begin
-	b ~ Beta(1, 1)
-	y ~ logpdf(Bernoulli(0.5),0.5)
+if (A11B11 + A12B12 + A21B21 - A22B22) <= 2*(1+delta)
+	println(string("	(",A11B11," + ",A12B12," + ",A21B21," - ",A22B22,") <= 2*(1+",delta,")"))
+	println(" 	Condition 13 Passed!\n")
+else
+	println(string("	(",A11B11," + ",A12B12," + ",A21B21," - ",A22B22,") is not <= 2*(1+",delta,")"))
+	println(" 	Condition 13 Failed!\n")
 end
 
-chain = sample(simple_choice(y), HMC(300, 0.1, 5))
+if (A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta)
+	println(string("	(",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
+	println(" 	Condition 14 Passed!\n")
+else
+	println(string("	(",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
+	println(" 	Condition 14 Failed!\n")
+end
 
-var_1 = y#chain[:y]
-#var_2 = chain[:z]
+if (A11B11 - A12B12 + A21B21 + A22B22) <= 2*(1+delta)
+	println(string("	(",A11B11," - ",A12B12," + ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
+	println(" 	Condition 15 Passed!\n")
+else
+	println(string("	(",A11B11," - ",A12B12," + ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
+	println(" 	Condition 15 Failed!\n")
+end
 
-#println(mean(var_0))
-println(var_1)
-#println(var_2)
+if (0 - A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta)
+	println(string("	( - ",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
+	println(" 	Condition 16 Passed!\n")
+else
+	println(string("	( - ",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
+	println(" 	Condition 16 Failed!\n")
+end
 
-#k ~ Binomial(p, q)
-#p ~ Beta(1, 1)
-#q ~ Beta(1, 1)
-#var_1 = chain[:k]
-#println(mean(var_1))
-#println(var_1)
-#p2 = plot(chain);  draw(PNG(15cm, 10cm), gridstack([p2[1] p2[2]; p2[9] p2[10]]));
-#@model model(N) = begin
-#	α ~ Beta(1, 1)
-#	θ = Vector{Vector{Real}}(N)
-#	θ[m] ~ Bernoulli(α)
-#end
 
-#cflip = model(1)
-#chain = sample(cflip, HMC(1000, 0.1, 5))
-#describe(cflip)
 
-#@model simple_choice() = begin
-#	p ~ Beta(1, 1)
-#	z ~ Bernoulli(p)
-#	if z == 1
-#		x ~ Normal(0, 1)
-#	else
-#		x ~ Normal(1, 1)
-#	end
-#end
 
-#simple_choice_f = simple_choice
 
-#chain = sample(simple_choice(), HMC(1000, 0.1, 5))
-#println(chain)
-#describe(chain)
 
-#S = 1     # number of samplers
-#N = 2000
-#spls = [HMC(N,0.005,5)][1:S]
 
-#c = sample(gdemo([1.5, 2]), spls)
 
-#obs = [0, 1, 0, 1, 0, 0, 0, 0, 0, 1] # the observations
-
-#@model betabinomial begin
-#	@assume p ∼ Beta(1, 1) # define the prior
-#	for i = 1:length(obs)
-#		@observe obs[i] ∼ Bernoulli(p) # observe data points
-#	end
-#	@predict p # predict of p
-#end
-
-=#

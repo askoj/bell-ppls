@@ -1,37 +1,37 @@
-[info] Updating ProjectRef(uri("file:/Users/ak-o/IdeaProjects/Scala_1/project/"), "scala_1-build")...
-[debug] :: resolving dependencies :: default#scala_1-build;0.1.0-SNAPSHOT
+[info] Updating ProjectRef(uri("file:/Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/"), "p_figaro-build")...
+[debug] :: resolving dependencies :: default#p_figaro-build;0.1.0-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [test]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [test]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [provided]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.12.6
 [debug] 	found org.scala-lang#scala-library;2.12.6 in sbt-chain
 [debug] 	[2.12.6] org.scala-lang#scala-library;2.12.6
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;1.1.5 {provided=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;1.1.5
 [debug] 	found org.scala-sbt#sbt;1.1.5 in sbt-chain
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-lang#scala-library;2.12.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -4261,17 +4261,17 @@
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-lang#scala-library;2.12.6 [runtime->compile]
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-sbt#main_2.12;1.1.5 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-sbt#main_2.12;1.1.5 [runtime->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile-internal]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile-internal]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [provided]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
@@ -4280,10 +4280,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
@@ -4292,8 +4292,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-lang#scala-library;2.12.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -8751,22 +8751,22 @@
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#zinc-compile-core_2.12;1.1.7 [runtime->compile]
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#util-tracking_2.12;1.1.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#util-tracking_2.12;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [runtime-internal]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [runtime-internal]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [test-internal]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [test]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [test-internal]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [test]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [provided]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
@@ -8779,10 +8779,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
@@ -8795,8 +8795,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-sbt#sbt;1.1.5->org.scala-lang#scala-library;2.12.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -13562,20 +13562,20 @@
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#zinc-compile-core_2.12;1.1.7 [runtime->compile]
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#util-tracking_2.12;1.1.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-sbt#zinc-compile_2.12;1.1.7->org.scala-sbt#util-tracking_2.12;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-sbt#sbt;1.1.5 [provided->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [plugin]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [plugin]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [pom]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#scala_1-build;0.1.0-SNAPSHOT [scala-tool]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->default]
+[debug] == resolving dependencies for default#p_figaro-build;0.1.0-SNAPSHOT [scala-tool]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.6->org.scala-lang#scala-library;2.12.6 [compile->master(*)]
@@ -13665,12 +13665,12 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.6 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.6 [runtime->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.12.6 [scala-tool->optional(default)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.6->jline#jline;2.14.6 [optional->master(*)]
@@ -13689,49 +13689,52 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.6 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.6->jline#jline;2.14.6 [optional->compile(*)]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->default]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->runtime]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->compile]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->master]
-[debug] == resolving dependencies default#scala_1-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->default]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->compile]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->master]
+[debug] == resolving dependencies default#p_figaro-build;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.12.6 [scala-tool->optional(default)]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.internal.librarymanagement.IvyScalaUtil$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.6!scala-reflect.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#main_2.12;1.1.5!main_2.12.jar
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#task-system_2.12;1.1.5!task-system_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-apiinfo_2.12;1.1.7!zinc-apiinfo_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-tracking_2.12;1.1.3!util-tracking_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-core_2.12;1.1.7!zinc-core_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#sbinary_2.12;0.4.4!sbinary_2.12.jar
-[debug] 	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.jar(bundle)
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-position_2.12;1.1.3!util-position_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-relation_2.12;1.1.3!util-relation_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-ivy_2.12;1.1.4!librarymanagement-ivy_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] 	[NOT REQUIRED] com.lihaoyi#sourcecode_2.12;0.1.3!sourcecode_2.12.jar
-[debug] 	[NOT REQUIRED] com.lmax#disruptor;3.3.6!disruptor.jar
-[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.10.4!jawn-parser_2.12.jar
-[debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-murmurhash_2.12;0.8.2!sjson-new-murmurhash_2.12.jar
 [debug] 	[NOT REQUIRED] com.jcraft#jsch;0.1.54!jsch.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-cache_2.12;1.1.3!util-cache_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#main-settings_2.12;1.1.5!main-settings_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#launcher-interface;1.0.4!launcher-interface.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#io_2.12;1.1.8!io_2.12.jar
 [debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#command_2.12;1.1.5!command_2.12.jar
-[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.2.2!ssl-config-core_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] com.squareup.okio#okio;1.12.0!okio.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.6!scala-reflect.jar
+[debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-murmurhash_2.12;0.8.2!sjson-new-murmurhash_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-cache_2.12;1.1.3!util-cache_2.12.jar
+[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.10.4!jawn-parser_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] org.scala-sbt#main_2.12;1.1.5!main_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#sbinary_2.12;0.4.4!sbinary_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] com.lihaoyi#sourcecode_2.12;0.1.3!sourcecode_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-ivy_2.12;1.1.4!librarymanagement-ivy_2.12.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#gigahorse-core_2.12;0.3.0!gigahorse-core_2.12.jar
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
-[debug] 	[NOT REQUIRED] com.github.cb372#scalacache-core_2.12;0.20.0!scalacache-core_2.12.jar
-[debug] 	[NOT REQUIRED] net.java.dev.jna#jna;4.5.0!jna.jar
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] org.scala-sbt#main-settings_2.12;1.1.5!main-settings_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-position_2.12;1.1.3!util-position_2.12.jar
+[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar
+[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.2.2!ssl-config-core_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.6!scala-library.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#io_2.12;1.1.8!io_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#launcher-interface;1.0.4!launcher-interface.jar
+[debug] 	[NOT REQUIRED] com.squareup.okio#okio;1.12.0!okio.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-core_2.12;1.1.7!zinc-core_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] com.github.cb372#scalacache-core_2.12;0.20.0!scalacache-core_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
+[debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-tracking_2.12;1.1.3!util-tracking_2.12.jar
+[debug] 	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.jar(bundle)
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-relation_2.12;1.1.3!util-relation_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] com.lmax#disruptor;3.3.6!disruptor.jar
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
@@ -13752,15 +13755,13 @@
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] 	[NOT REQUIRED] net.java.dev.jna#jna;4.5.0!jna.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#command_2.12;1.1.5!command_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#task-system_2.12;1.1.5!task-system_2.12.jar
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
 [debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
-[debug] no default ivy user dir defined: set to /Users/ak-o/.ivy2
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
@@ -13777,96 +13778,33 @@
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] settings loaded (88ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (101ms)
+[debug] settings loaded (65ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -13875,8 +13813,122 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#sbt;1.1.5!sbt.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (111ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] settings loaded (123ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-control_2.12;1.1.3!util-control_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#run_2.12;1.1.5!run_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (147ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] settings loaded (187ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
@@ -13886,131 +13938,31 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.eed3si9n#gigahorse-okhttp_2.12;0.3.0!gigahorse-okhttp_2.12.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp-urlconnection;3.7.0!okhttp-urlconnection.jar
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (122ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (121ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-api;2.8.1!log4j-api.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#core-macros_2.12;1.1.5!core-macros_2.12.jar
-[debug] settings loaded (120ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-persist_2.12;1.1.7!zinc-persist_2.12.jar
-[debug] 	[NOT REQUIRED] com.trueaccord.scalapb#scalapb-runtime_2.12;0.6.0!scalapb-runtime_2.12.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] settings loaded (132ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;1.1.7!compiler-interface.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] settings loaded (136ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile_2.12;1.1.7!zinc-compile_2.12.jar
-[debug] 	[NOT REQUIRED] com.lihaoyi#fastparse-utils_2.12;0.4.2!fastparse-utils_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#protocol_2.12;1.1.5!protocol_2.12.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic_2.12;1.1.5!logic_2.12.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (198ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	[NOT REQUIRED] org.scala-sbt#actions_2.12;1.1.5!actions_2.12.jar
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-logging_2.12;1.1.3!util-logging_2.12.jar
-[debug] settings loaded (197ms)
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (184ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-classfile_2.12;1.1.7!zinc-classfile_2.12.jar
+[debug] settings loaded (188ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -14019,15 +13971,15 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar(test-jar)
-[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-core_2.12;1.1.4!librarymanagement-core_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-slf4j-impl;2.8.1!log4j-slf4j-impl.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] com.github.cb372#scalacache-caffeine_2.12;0.20.0!scalacache-caffeine_2.12.jar
-[debug] settings loaded (210ms)
+[debug] settings loaded (178ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -14037,23 +13989,13 @@
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#collections_2.12;1.1.5!collections_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (242ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	[NOT REQUIRED] org.scala-sbt#run_2.12;1.1.5!run_2.12.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] settings loaded (215ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
@@ -14064,9 +14006,174 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	[NOT REQUIRED] net.java.dev.jna#jna-platform;4.5.0!jna-platform.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-interface;1.1.3!util-interface.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;1.1.5!test-agent.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] settings loaded (210ms)
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] com.lihaoyi#fastparse-utils_2.12;0.4.2!fastparse-utils_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (212ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] settings loaded (202ms)
+[debug] settings loaded (203ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;1.1.7!compiler-interface.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-logging_2.12;1.1.3!util-logging_2.12.jar
+[debug] settings loaded (202ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile_2.12;1.1.7!zinc-compile_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (209ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-core_2.12;1.1.4!librarymanagement-core_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#core-macros_2.12;1.1.5!core-macros_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#protocol_2.12;1.1.5!protocol_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (216ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] settings loaded (235ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (221ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-ivy-integration_2.12;1.1.7!zinc-ivy-integration_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc_2.12;1.1.7!zinc_2.12.jar
+[debug] settings loaded (237ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-scalajson_2.12;0.8.2!sjson-new-scalajson_2.12.jar
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] settings loaded (223ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] settings loaded (208ms)
+[debug] 	default resolver: default
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.6!scala-compiler.jar
+[debug] 	[NOT REQUIRED] net.java.dev.jna#jna-platform;4.5.0!jna-platform.jar
+[debug] settings loaded (238ms)
+[debug] settings loaded (219ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-api;2.8.1!log4j-api.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (226ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-persist_2.12;1.1.7!zinc-persist_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] com.trueaccord.scalapb#scalapb-runtime_2.12;0.6.0!scalapb-runtime_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (222ms)
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -14076,41 +14183,7 @@
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.scala-sbt.ipcsocket#ipcsocket;1.0.0!ipcsocket.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (222ms)
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (233ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (239ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (232ms)
+[debug] settings loaded (230ms)
 [debug] 	default cache: /Users/ak-o/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -14121,184 +14194,111 @@
 [debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile-core_2.12;1.1.7!zinc-compile-core_2.12.jar
 [debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (237ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (250ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (252ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp;3.7.0!okhttp.jar
-[debug] settings loaded (258ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (262ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;1.1.5!test-agent.jar
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (268ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (266ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (269ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (360ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default cache defined: set to /Users/ak-o/.ivy2/cache
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] settings loaded (274ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (285ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (277ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (285ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (298ms)
-[debug] 	default cache: /Users/ak-o/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-control_2.12;1.1.3!util-control_2.12.jar
-[debug] 	[NOT REQUIRED] com.github.ben-manes.caffeine#caffeine;2.5.6!caffeine.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#tasks_2.12;1.1.5!tasks_2.12.jar
-[debug] 	[NOT REQUIRED] com.swoval#apple-file-events;1.3.2!apple-file-events.jar
-[debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-scalajson_2.12;0.8.2!sjson-new-scalajson_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310!ivy.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#testing_2.12;1.1.5!testing_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-classfile_2.12;1.1.7!zinc-classfile_2.12.jar
-[debug] 	[NOT REQUIRED] com.trueaccord.lenses#lenses_2.12;0.4.12!lenses_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-classpath_2.12;1.1.7!zinc-classpath_2.12.jar
-[debug] 	[NOT REQUIRED] com.lihaoyi#fastparse_2.12;0.4.2!fastparse_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-ivy-integration_2.12;1.1.7!zinc-ivy-integration_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.6!scala-compiler.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc_2.12;1.1.7!zinc_2.12.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-core_2.12;0.8.2!sjson-new-core_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#completion_2.12;1.1.5!completion_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#collections_2.12;1.1.5!collections_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] org.scala-sbt#sbt;1.1.5!sbt.jar
-[debug] 	[NOT REQUIRED] com.eed3si9n#shaded-scalajson_2.12;1.0.0-M4!shaded-scalajson_2.12.jar
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.0.5!scala-parser-combinators_2.12.jar(bundle)
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	[NOT REQUIRED] com.eed3si9n#shaded-scalajson_2.12;1.0.0-M4!shaded-scalajson_2.12.jar
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.trueaccord.lenses#lenses_2.12;0.4.12!lenses_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (239ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	[NOT REQUIRED] com.lihaoyi#fastparse_2.12;0.4.2!fastparse_2.12.jar
+[debug] settings loaded (220ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#tasks_2.12;1.1.5!tasks_2.12.jar
+[debug] including url: jar:file:/Users/ak-o/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.scala-sbt#testing_2.12;1.1.5!testing_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-classpath_2.12;1.1.7!zinc-classpath_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-interface;1.1.3!util-interface.jar
+[debug] 	local [file]
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] settings loaded (241ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar(test-jar)
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-sbt#completion_2.12;1.1.5!completion_2.12.jar
+[debug] settings loaded (235ms)
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-slf4j-impl;2.8.1!log4j-slf4j-impl.jar
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.eed3si9n#gigahorse-okhttp_2.12;0.3.0!gigahorse-okhttp_2.12.jar
+[debug] 	[NOT REQUIRED] com.github.cb372#scalacache-caffeine_2.12;0.20.0!scalacache-caffeine_2.12.jar
+[debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp-urlconnection;3.7.0!okhttp-urlconnection.jar
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar
+[debug] settings loaded (239ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.github.ben-manes.caffeine#caffeine;2.5.6!caffeine.jar
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar
-[debug] :: resolution report :: resolve 10635ms :: artifacts dl 947ms
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT compile produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-compile.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT runtime produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-runtime.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT test produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-test.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT provided produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-provided.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT optional produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-optional.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT compile-internal produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-compile-internal.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT runtime-internal produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-runtime-internal.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT test-internal produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-test-internal.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT plugin produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-plugin.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT pom produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-pom.xml
-[debug] 	report for default#scala_1-build;0.1.0-SNAPSHOT scala-tool produced in /Users/ak-o/IdeaProjects/Scala_1/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-scala_1-build-scala-tool.xml
-[debug] 	resolve done (10635ms resolve - 947ms download)
+[debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310!ivy.jar
+[debug] settings loaded (244ms)
+[debug] 	default cache: /Users/ak-o/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	[NOT REQUIRED] com.swoval#apple-file-events;1.3.2!apple-file-events.jar
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp;3.7.0!okhttp.jar
+[debug] :: resolution report :: resolve 6177ms :: artifacts dl 741ms
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT compile produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-compile.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT runtime produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-runtime.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT test produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-test.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT provided produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-provided.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT optional produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-optional.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT compile-internal produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-compile-internal.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT runtime-internal produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-runtime-internal.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT test-internal produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-test-internal.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT plugin produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-plugin.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT pom produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-pom.xml
+[debug] 	report for default#p_figaro-build;0.1.0-SNAPSHOT scala-tool produced in /Users/ak-o/Developer/2018/May_PPrograms/p_figaro/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-p_figaro-build-scala-tool.xml
+[debug] 	resolve done (6177ms resolve - 741ms download)
 [info] Done updating.

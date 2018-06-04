@@ -1,93 +1,104 @@
-
-import com.cra.figaro.algorithm.factored.VariableElimination
 import com.cra.figaro.algorithm.sampling._
 import com.cra.figaro.language._
-import com.cra.figaro.library.collection.Container
-import com.cra.figaro.library.compound.If
+import com.cra.figaro.library.compound.{FastIf, If}
 
 object Test {
 
-  def Context (i : Double, j : Double): Array[Element[Boolean]] = {
-    val c_i = If(Flip(i), 'H', 'T')
-    val c_j = If(Flip(j), 'H', 'T')
-    Array(
-      c_i === 'H',
-      c_j === 'H',
-      c_i === 'H' && c_j === 'H'
-    )
+  val ch = 97
+  def Context (rvs : Array[Double],itr : Int): Array[Double] = {
+    var a_c = Array[FastIf[Char]]()
+    for( x <- rvs ){
+      a_c :+= If(Flip(x), (0+ch).toChar, (1+ch).toChar)
+    }
+    var b_c = Array[Element[Boolean]]()
+    for (y <- 0 to 1) {
+      for (z <- 2 to 3) {
+        var c_c = Array[Element[Boolean]]()
+        for (a <- 0 to 1) {
+          for (b <- 0 to 1) {
+            c_c :+= (a_c(y) === (a+ch).toChar && a_c(z) === (b+ch).toChar)
+          }
+        }
+        b_c ++= c_c
+      }
+    }
+    val alg = MetropolisHastings(itr, ProposalScheme.default,b_c : _*)
+    alg.start()
+    var p = Array[Double]()
+    for (i <- 0 to 15) {
+      p :+= alg.probability(b_c(i), true)
+    }
+    p
   }
 
-  def Experiment_1 (): Unit = {
-
-    val A1 = 0.6
-    val B1 = 0.5
-    val A2 = 0.2
-    val B2 = 0.3
-    val A3 = 0.5
-
-    val C1 = Context(A2, B1)
-    val C2 = Context(A1, B1)
-    val C3 = Context(A1, B2)
-    val C4 = Context(A3, B2)
-
-    val alg = MetropolisHastings(1000000, ProposalScheme.default,
-      C1(0), C1(1), C1(2),
-      C2(0), C2(1), C2(2),
-      C3(0), C3(1), C3(2),
-      C4(0), C4(1), C4(2))
-    alg.start()
-
-    val C1_A2_B1 = alg.probability(C1(2), true)
-    val C1_A2 = alg.probability(C1(0), true)
-    val C1_B1 = alg.probability(C1(1), true)
-
-    val C2_A1_B1 = alg.probability(C2(2), true)
-    val C2_A1 = alg.probability(C2(0), true)
-    val C2_B1 = alg.probability(C2(1), true)
-
-    val C3_A1_B2 = alg.probability(C3(2), true)
-    val C3_A1 = alg.probability(C3(0), true)
-    val C3_B2 = alg.probability(C3(1), true)
-
-    val C4_A3_B2 = alg.probability(C4(2), true)
-    val C4_A3 = alg.probability(C4(0), true)
-    val C4_B2 = alg.probability(C4(1), true)
-
-
-    val A1_a = (C2_A1 + C3_A1) / 2
-    val B1_a = (C1_B1 + C2_B1) / 2
-    val B2_a = (C3_B2 + C4_B2) / 2
-
-    println("A1 = " + A1_a)
-    println("B1 = " + B1_a)
-    println("B2 = " + B2_a)
-
-    println("A2_B1 = " + C1_A2_B1)
-    println("A2 = " + C1_A2)
-    println("B1 = " + C1_B1)
-
-    println("A1_B1 = " + C2_A1_B1)
-    println("A1 = " + C2_A1)
-    println("B1 = " + C2_B1)
-
-    println("A1_B2 = " + C3_A1_B2)
-    println("A1 = " + C3_A1)
-    println("B2 = " + C3_B2)
-
-    println("A3_B2 = " + C4_A3_B2)
-    println("A3 = " + C4_A3)
-    println("B2 = " + C4_B2)
-
-    val LHS = ( A1_a * C1_A2 * B1_a * B2_a * C4_A3 )
-    0.03325133 / 0.01257
-    val RHS = ( C1_A2_B1 * C2_A1_B1 * C3_A1_B2 * C4_A3_B2 ) / ( A1_a * B1_a * B2_a )
-    println(LHS)
-    println(RHS)
+  def no_signalling_test(val1: Double, val2: Double,val3: Double,val4: Double): Unit = {
+    if ((val1 + val2) == (val3 + val4)) {
+      println("No signalling condition passed!")
+    } else {
+      println("No signalling condition failed!")
+    }
   }
 
   def main(args: Array[String]) {
 
-    Experiment_1()
+    val p = Context(Array[Double](0.6, 0.2, 0.5, 0.3), 100000)
+
+    println(p.deep.mkString("\n"))
+
+    no_signalling_test(p(0),p(1),p(4),p(5))
+    no_signalling_test(p(8),p(9),p(12),p(13))
+    no_signalling_test(p(0),p(2),p(8),p(10))
+    no_signalling_test(p(4),p(6),p(12),p(14))
+
+    val A11 = (2 * (p(0) + p(1))) - 1
+    val A12 = (2 * (p(4) + p(5))) - 1
+    val A21 = (2 * (p(8) + p(9))) - 1
+    val A22 = (2 * (p(12) + p(13))) - 1
+    val B11 = (2 * (p(0) + p(2))) - 1
+    val B12 = (2 * (p(8) + p(10))) - 1
+    val B21 = (2 * (p(5) + p(6))) - 1
+    val B22 = (2 * (p(12) + p(14))) - 1
+
+    val Δ = (
+            (Math.abs(A11) - Math.abs(A12))
+            + (Math.abs(A21) - Math.abs(A22))
+            + (Math.abs(B11) - Math.abs(B12))
+            + (Math.abs(B21) - Math.abs(A22))) / 2
+
+    if (Δ >= 1) {
+      println("Delta is greater than or equal to 1")
+    } else {
+      println("Delta is smaller than 1 so contextuality may probably occur")
+    }
+
+    val A11B11 = (p(0) + p(3)) - (p(1) + p(2))
+    val A12B12 = (p(4) + p(7)) - (p(5) + p(6))
+    val A21B21 = (p(8) + p(11)) - (p(9) + p(10))
+    val A22B22 = (p(12) + p(15)) - (p(13) + p(14))
+
+    if ((A11B11 + A12B12 + A21B21 - A22B22) <= 2*(1+Δ)) {
+      println("Bell scenario test 1 passed")
+    } else {
+      println("Bell scenario test 1 failed")
+    }
+
+    if ((A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+Δ)) {
+      println("Bell scenario test 2 passed")
+    } else {
+      println("Bell scenario test 2 failed")
+    }
+
+    if ((A11B11 - A12B12 + A21B21 + A22B22) <= 2*(1+Δ)) {
+      println("Bell scenario test 3 passed")
+    } else {
+      println("Bell scenario test 3 failed")
+    }
+
+    if ((0 - A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+Δ)) {
+      println("Bell scenario test 4 passed")
+    } else {
+      println("Bell scenario test 4 failed")
+    }
 
   }
 }
