@@ -1,114 +1,83 @@
+
 import com.cra.figaro.algorithm.sampling._
 import com.cra.figaro.language._
-import com.cra.figaro.library.compound.{FastIf, If}
+import com.cra.figaro.library.compound.If
 
 object Test {
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
+  val startTimeMillis = System.currentTimeMillis()
 
-  val ch = 97
-  def PTables (rvs : Array[Double],itr : Int): Array[Double] = {
-    var a_c = Array[FastIf[Char]]()
-    for( x <- rvs ){
-      a_c :+= If(Flip(x), (0+ch).toChar, (1+ch).toChar)
-    }
-    var b_c = Array[Element[Boolean]]()
-    for (y <- 0 to 1) {
-      for (z <- 2 to 3) {
-        var c_c = Array[Element[Boolean]]()
-        for (a <- 0 to 1) {
-          for (b <- 0 to 1) {
-            c_c :+= (a_c(y) === (a+ch).toChar && a_c(z) === (b+ch).toChar)
-          }
-        }
-        b_c ++= c_c
-      }
-    }
-    val alg = MetropolisHastings(itr, ProposalScheme.default,b_c : _*)
-    alg.start()
-    var p = Array[Double]()
-    for (i <- 0 to 15) {
-      p :+= alg.probability(b_c(i), true)
-    }
-    p
+  class Model(Probability1 : Double, Probability2 : Double) {
+    val V1 = If(Flip(Probability1), 1, 0)
+    val V2 = If(Flip(Probability2), 1, 0)
+    var JointOutcomes = Array[Element[Boolean]]()
+    for (a <- 0 to 1; b <- 0 to 1)
+      JointOutcomes :+= (V1 === a && V2 === b)
   }
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-
-  def no_signalling_test(val1: Double, val2: Double,val3: Double,val4: Double): Unit = {
-    if ((val1 + val2) == (val3 + val4)) {
-      println("No signalling condition passed!")
-    } else {
-      println("No signalling condition failed!")
-    }
+  def Context(model : Model, iterations : Int): Array[Double] = {
+    val algorithm = MetropolisHastings(iterations,
+      ProposalScheme.default,model.JointOutcomes : _*)
+    algorithm.start
+    algorithm.stop
+    var jointProbabilities = Array[Double]()
+    for (i <- 0 to 3)
+      jointProbabilities :+=
+        algorithm.probability(model.JointOutcomes(i), true)
+    algorithm.kill
+    jointProbabilities
   }
 
   def main(args: Array[String]) {
+    val A1 = 0.6
+    val A2 = 0.2
+    val B1 = 0.2
+    val B2 = 0.2
+    var globalDistribution = Array[Double]()
+    globalDistribution ++= Context(new Model(A1, B1),50000)
+    globalDistribution ++= Context(new Model(A1, B2),50000)
+    globalDistribution ++= Context(new Model(A2, B1),50000)
+    globalDistribution ++= Context(new Model(A2, B2),50000)
+    val p = globalDistribution
+    println(p.deep)
 
-    val p = PTables(Array[Double](0.6, 0.2, 0.5, 0.3), 100000)
-
-    println(p.deep.mkString("\n"))
-
-    no_signalling_test(p(0),p(1),p(4),p(5))
-    no_signalling_test(p(8),p(9),p(12),p(13))
-    no_signalling_test(p(0),p(2),p(8),p(10))
-    no_signalling_test(p(4),p(6),p(12),p(14))
-
-    val A11 = (2 * (p(0) + p(1))) - 1
-    val A12 = (2 * (p(4) + p(5))) - 1
-    val A21 = (2 * (p(8) + p(9))) - 1
-    val A22 = (2 * (p(12) + p(13))) - 1
-    val B11 = (2 * (p(0) + p(2))) - 1
-    val B12 = (2 * (p(8) + p(10))) - 1
-    val B21 = (2 * (p(5) + p(6))) - 1
-    val B22 = (2 * (p(12) + p(14))) - 1
-
-    val Δ = (
-            (Math.abs(A11) - Math.abs(A12))
-            + (Math.abs(A21) - Math.abs(A22))
-            + (Math.abs(B11) - Math.abs(B12))
-            + (Math.abs(B21) - Math.abs(A22))) / 2
-
-    if (Δ >= 1) {
-      println("Delta is greater than or equal to 1")
-    } else {
-      println("Delta is smaller than 1 so contextuality may probably occur")
+    def signalling(v1: Int, v2: Int, v3: Int, v4: Int): Boolean = {
+      println((p(v1)+p(v2)).toString()+" = "+(p(v3)+p(v4)).toString())
+      println((p(v1)+p(v2))-(p(v3)+p(v4)))
+      Math.abs((p(v1)+p(v2))-(p(v3)+p(v4))) < 0.01
     }
 
-    val A11B11 = (p(0) + p(3)) - (p(1) + p(2))
-    val A12B12 = (p(4) + p(7)) - (p(5) + p(6))
-    val A21B21 = (p(8) + p(11)) - (p(9) + p(10))
-    val A22B22 = (p(12) + p(15)) - (p(13) + p(14))
-
-    if ((A11B11 + A12B12 + A21B21 - A22B22) <= 2*(1+Δ)) {
-      println("Bell scenario test 1 passed")
-    } else {
-      println("Bell scenario test 1 failed")
+    def equality(v1: Int, v2: Int, v3: Int, v4: Int): Boolean = {
+      def f1(v1: Int, v2: Int): Double = {
+        Math.abs((2 * (p(v1) + p(v2))) - 1)
+      }
+      def f2(v1: Int, v2: Int, v3: Int, v4: Int): Double = {
+        (p(v1) + p(v2)) - (p(v3) + p(v4))
+      }
+      val delta = 0.5 * (
+        (f1(0,1) - f1(4,5)) + (f1(8,9) - f1(12,13)) +
+          (f1(0,2) - f1(4,6)) + (f1(8,10) - f1(12,14)))
+      (2 * (1 + delta)) >= Math.abs(
+        (v1*f2(0,3,1,2)) + (v2*f2(4,7,5,6)) +
+          (v3*f2(8,11,9,10)) + (v4*f2(12,15,13,14)))
     }
 
-    if ((A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+Δ)) {
-      println("Bell scenario test 2 passed")
-    } else {
-      println("Bell scenario test 2 failed")
-    }
+    val tests = Array[Boolean](
+      signalling(0,1,4,5),
+      signalling(8,9,12,13),
+      signalling(0,2,8,10),
+      signalling(4,6,12,14),
+      equality(1,1,1,-1),
+      equality(1,1,-1,1),
+      equality(1,-1,1,1),
+      equality(-1,1,1,1)
+    )
 
-    if ((A11B11 - A12B12 + A21B21 + A22B22) <= 2*(1+Δ)) {
-      println("Bell scenario test 3 passed")
-    } else {
-      println("Bell scenario test 3 failed")
-    }
+    println(tests.deep)
 
-    if ((0 - A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+Δ)) {
-      println("Bell scenario test 4 passed")
-    } else {
-      println("Bell scenario test 4 failed")
-    }
-
+    val endTimeMillis = System.currentTimeMillis()
+    val durationSeconds = (endTimeMillis - startTimeMillis) / 1000.0
+    println(durationSeconds)
   }
+
 }

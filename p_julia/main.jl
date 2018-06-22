@@ -1,160 +1,75 @@
 using Turing
 using Distributions
 
-################################################################################################
-################################################################################################
-################################################################################################
-################################################################################################
+tic()
 
-@model bmdl(p) = begin
-  z ~ Beta(1,1)
-  x ~ Bernoulli(p)
-  x
-end
-
-function main(rvs, itr)
-	d = Array{Array}(length(rvs))
-	for i = 1:length(rvs)
-		r = sample(bmdl(rvs[i]), SMC(itr))
-		d[i] = r[:x]
+function context(rvs, itr)
+	@model mdl(p) = begin
+		z ~ Beta(1,1)
+		x ~ Bernoulli(p[1])
+		y ~ Bernoulli(p[2])
 	end
-	apt = Array{Array}(length(rvs))
-	j = 0
-	for a = 1:2
-		for b = 3:4
-			j += 1
-			pt = [0.0,0.0,0.0,0.0]
-			for i = 1:itr
-				pt[(d[a][i] == d[b][i] ? -2 : 0)+(d[a][i] == 0 ? 3 : 4)] += 1
-			end
-			for i = 1:length(pt)
-				pt[i] /= itr
-			end
-			apt[j] = pt
-		end
+	p = [0.0,0.0,0.0,0.0]
+	d = Array{Array}(2)
+	r = sample(mdl(rvs), SMC(itr))
+	d[1] = r[:x]
+	d[2] = r[:y]
+	for i = 1:itr
+		p[mod(((d[1][i] == d[2][i] ? 2 : 0)-(d[2][i] == 0 ? 2 : 3)),4)+1] += 1
 	end
-	apt
-end
-
-# A1, A2, B1, B2
-
-data = main([ 0.6, 0.2, 0.5, 0.3 ], 100000)
-
-################################################################################################
-################################################################################################
-################################################################################################
-################################################################################################
-
-p = zeros(0)
-for i = 1:4
-	append!( p , data[i][1] )
-	append!( p , data[i][3] )
-	append!( p , data[i][4] )
-	append!( p , data[i][2] )
-end
-
-# Set Up
-
-println("P-Array")
-for i = 1:16
-	println(string("\n	p",string(i)," = ",string(p[i])))
-end
-println("\n")
-
-# No Signalling
-
-function no_signalling_test(val1, val2, val3, val4)
-	println("\n")
-	if ((val1 + val2) == (val3 + val4))
-		println(string("	(",string(val1)," + ",string(val2),") = (",string(val3)," + ",string(val4),")"))
-		println(string("	(",string((val1+val2)),") = (",string((val3+val4)),")"))
-		println("	Signalling Test Passed!")
-	else
-		println(string("	(",string(val1)," + ",string(val2),") <> (",string(val3)," + ",string(val4),")"))
-		println(string("	(",string((val1+val2)),") <> (",string((val3+val4)),")"))
-		println("	Signalling Test Failed!")
+	for i = 1:4
+		p[i] /= itr
 	end
+	p
 end
 
-println("Signalling Tests")
-no_signalling_test(p[1],p[2],p[5],p[6])
-no_signalling_test(p[9],p[10],p[13],p[14])
-no_signalling_test(p[1],p[3],p[9],p[11])
-no_signalling_test(p[5],p[7],p[13],p[15])
-println("\n")
+A1 = 0.6
+A2 = 0.2
+B1 = 0.5
+B2 = 0.3
 
-# Bell Scenario
+global_distribution = zeros(0)
+append!( global_distribution , context([ A1 , B1 ], 50000) )
+append!( global_distribution , context([ A1 , B2 ], 50000) )
+append!( global_distribution , context([ A2 , B1 ], 50000) )
+append!( global_distribution , context([ A2 , B2 ], 50000) )
+p = global_distribution
 
-A11 = (2 * (p[1] + p[2])) - 1
-A12 = (2 * (p[5] + p[6])) - 1
-A21 = (2 * (p[9] + p[10])) - 1
-A22 = (2 * (p[13] + p[14])) - 1
-B11 = (2 * (p[1] + p[3])) - 1
-B12 = (2 * (p[9] + p[11])) - 1
-B21 = (2 * (p[5] + p[7])) - 1
-B22 = (2 * (p[13] + p[15])) - 1
-delta = ((abs(A11) - abs(A12)) + (abs(A21) - abs(A22)) + (abs(B11) - abs(B12)) + (abs(B21) - abs(A22))) / 2
-
-println("Bell Scenario Experiment")
-println(string("\n	A11 = ",string(A11)))
-println(string("\n	A12 = ",string(A12)))
-println(string("\n	A21 = ",string(A21)))
-println(string("\n	A22 = ",string(A22)))
-println(string("\n	B11 = ",string(B11)))
-println(string("\n	B12 = ",string(B12)))
-println(string("\n	B21 = ",string(B21)))
-println(string("\n	B22 = ",string(B22)))
-println(string("\n	Delta = ",string(delta)))
+println(p)
 
 
-
-if delta >= 1
-	println("	Delta is greater than or equal to 1 so contextuality cannot occur\n")
-else
-	println("	Delta is smaller than 1 so contextuality may probably occur\n")
+function signalling(a,b,c,d)
+	println(string("	(",string(p[a] + p[b]),") = (",string(p[c] + p[d]),")"))
+	println(abs((p[a]+p[b])-(p[c]+p[d])))
+	abs((p[a]+p[b])-(p[c]+p[d])) < 0.01
 end
 
-A11B11 = (p[1] + p[4]) - (p[2] + p[3])
-A12B12 = (p[5] + p[8]) - (p[6] + p[7])
-A21B21 = (p[9] + p[12]) - (p[10] + p[11])
-A22B22 = (p[13] + p[16]) - (p[14] + p[15])
-
-if (A11B11 + A12B12 + A21B21 - A22B22) <= 2*(1+delta)
-	println(string("	(",A11B11," + ",A12B12," + ",A21B21," - ",A22B22,") <= 2*(1+",delta,")"))
-	println(" 	Condition 13 Passed!\n")
-else
-	println(string("	(",A11B11," + ",A12B12," + ",A21B21," - ",A22B22,") is not <= 2*(1+",delta,")"))
-	println(" 	Condition 13 Failed!\n")
+function equality(v1,v2,v3,v4)
+	function f1(v1,v2)
+		abs((2 * (p[v1] + p[v2])) - 1)
+	end
+	function f2(v1,v2,v3,v4)
+		(p[v1] + p[v2]) - (p[v3] + p[v4])
+	end
+	delta = 0.5 * ( 
+		(f1(1,2) - f1(5,6)) + (f1(9,10) - f1(13,14)) + 
+		(f1(1,3) - f1(5,7)) + (f1(9,11) - f1(13,15)))
+	(2 * (1 + delta)) >= abs(
+		(v1*f2(1,4,2,3)) + (v2*f2(5,8,6,7)) +
+		(v3*f2(9,12,10,11)) + (v4*f2(13,16,14,15)))
 end
 
-if (A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta)
-	println(string("	(",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
-	println(" 	Condition 14 Passed!\n")
-else
-	println(string("	(",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
-	println(" 	Condition 14 Failed!\n")
-end
+tests = [
+	signalling(1,2,5,6),
+	signalling(9,10,13,14),
+	signalling(1,3,9,11),
+	signalling(5,7,13,15),
+	equality(1,1,1,-1),
+	equality(1,1,-1,1),
+	equality(1,-1,1,1),
+	equality(-1,1,1,1)
+	]
 
-if (A11B11 - A12B12 + A21B21 + A22B22) <= 2*(1+delta)
-	println(string("	(",A11B11," - ",A12B12," + ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
-	println(" 	Condition 15 Passed!\n")
-else
-	println(string("	(",A11B11," - ",A12B12," + ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
-	println(" 	Condition 15 Failed!\n")
-end
+println(tests)
 
-if (0 - A11B11 + A12B12 - A21B21 + A22B22) <= 2*(1+delta)
-	println(string("	( - ",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") <= 2*(1+",delta,")"))
-	println(" 	Condition 16 Passed!\n")
-else
-	println(string("	( - ",A11B11," + ",A12B12," - ",A21B21," + ",A22B22,") is not <= 2*(1+",delta,")"))
-	println(" 	Condition 16 Failed!\n")
-end
-
-
-
-
-
-
-
-
+toc()
