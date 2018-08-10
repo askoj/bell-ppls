@@ -30,11 +30,9 @@ def fr_product():
         for h in range(0, a*a):
             l = []
             if h != k:
-                y = s[g]
-                z = s[h]
                 for i in range(0, len(s)):
-                    x = s[i]
-                    l.append(x+y) if i < a else l.append(x+z)
+                    x = [s[i],s[g],s[h]]
+                    l.append(x[0]+x[1]) if i < a else l.append(x[0]+x[2])
                 j.append(l)
         k -= 1
     return j
