@@ -1,70 +1,132 @@
-import pyro
+from pyro import sample
 import torch
-import pyro.distributions as dist
+from numpy import zeros, array, fliplr, sum
+from functools import reduce
+from itertools import product
+from pyro.distributions import Bernoulli, Uniform
+import pprint
 import sys
 
-import time
+def foulis_randall_product():
+    fr_edges = []
+    H = [ [[[0,0],[1,0]],[[0,1],[1,1]]], [[[0,0],[1,0]],[[0,1],[1,1]]] ]
+    for edge_a in H[0]:
+        for edge_b in H[1]:
+            fr_edge = []
+            for vertex_a in edge_a:
+                for vertex_b in edge_b:
+                    fr_edge.append([ vertex_a[0], vertex_b[0], vertex_a[1], vertex_b[1]])
+            fr_edges.append(fr_edge)
+    for mc in range(0,2):
+        mc_i = abs(1-mc)
+        for edge in H[mc]:
+            for j in range(0,2):
+                fr_edge = []
+                for i in range(0, len(edge)):
+                    edge_b = H[mc_i][i]
+                    vertex_a = edge[abs(i-j)]
+                    vertex_b = edge_b[0]
+                    vertex_c = edge_b[1]
+                    vertices_a = [vertex_a[0], vertex_b[0], vertex_a[1], vertex_b[1]]
+                    vertices_b = [vertex_a[0], vertex_c[0], vertex_a[1], vertex_c[1]]
+                    fr_edge.append([ vertices_a[mc], vertices_a[mc_i], vertices_a[mc+2], vertices_a[mc_i+2]])
+                    fr_edge.append([ vertices_b[mc], vertices_b[mc_i], vertices_b[mc+2], vertices_b[mc_i+2]])
+                fr_edges.append(fr_edge)
+    return fr_edges
 
-start_time = time.time()
+def variable(v):
+    return torch.autograd.Variable(torch.Tensor([v]))
+
+def get_vertex(a, b, x, y):
+    return (2*x+a, 2*y+b)
+
+def get_hyperedges(H, n):
+    l = []
+    for idx, e in enumerate(H):
+        if n in e:
+            l.append(idx)
+    return l
+
+def organise(M):
+    return M.reshape(4).tolist()
+
+def generate_global_distribution(constraints,N):
+    hyperedges = foulis_randall_product()
+    hyperedges_tallies = zeros(12)
+    global_distribution = zeros((4, 4))
+    while sum(global_distribution) < N:
+        a = int(sample('A', Bernoulli(variable(0.5))))
+        b = int(sample('B', Bernoulli(variable(0.5))))
+        x = int(sample('X', Bernoulli(variable(0.5))))
+        y = int(sample('Y', Bernoulli(variable(0.5))))
+        value = float(sample('C', Uniform(variable(0.0), variable(1.0))))
+        print(value)
+        sys.exit()
+        if (value < constraints[x][y][a,b]):
+            for edge in get_hyperedges(hyperedges, [a, b, x, y]):
+                hyperedges_tallies[edge] += 1
+            global_distribution[get_vertex(a, b, x, y)] += 1
+    for a, b, x, y in product(range(2), range(2), range(2), range(2)):
+        summed_tally = (sum(hyperedges_tallies[e] for e in get_hyperedges(hyperedges, [a, b, x, y])))
+        global_distribution[get_vertex(a, b, x, y)] /= summed_tally
+    global_distribution *= 3
+    global_distribution = [0] + reduce(lambda x, y: x + y, [
+        organise(global_distribution[:2, :2]), organise(global_distribution[:2, 2:]), 
+        organise(global_distribution[2:, :2]), organise(global_distribution[2:, 2:])])
+    return global_distribution
 
 
-def context(R,N):
-	A = []
-	for r in R:
-		p = torch.autograd.Variable(torch.Tensor([r[1]]))
-		A.append([int(pyro.sample(r[0],dist.Bernoulli(p))) for j in range(N)])
-	P = [0.0] * 4
-	for c in range(0, N):
-		a = A[0][c]
-		b = A[1][c]
-		P[(a==b and 2 or 0)-(b==0 and 2 or 3)%4] += 1
-	for p in range(0, len(P)):
-		P[p] /= N
-	return P
 
 
-def record():
 
-	global_distribution = []
-	global_distribution.append(context([['A1',0.6],['B1',0.5]],50000))
-	global_distribution.append(context([['A1',0.6],['B2',0.3]],50000))
-	global_distribution.append(context([['A2',0.2],['B1',0.5]],50000))
-	global_distribution.append(context([['A2',0.2],['B2',0.3]],50000))
-	global_distribution = reduce(lambda x,y :x+y ,global_distribution)
-	p = global_distribution
 
-	print(p)
 
-	def signalling(a,b,c,d):
-		print(str((p[a]+p[b])) + " == " + str((p[c]+p[d])))
-		print(abs((p[a]+p[b])-(p[c]+p[d])))
-		return abs((p[a]+p[b])-(p[c]+p[d])) < 0.01
 
-	def equality(v1,v2,v3,v4):
-		def f1(v1,v2):
-			return abs((2 * (p[v1] + p[v2])) - 1)
-		def f2(v1,v2,v3,v4):
-			return (p[v1] + p[v2]) - (p[v3] + p[v4])
-		delta = 0.5 * ( 
-			(f1(0,1) - f1(4,5)) + (f1(8,9) - f1(12,13)) + 
-			(f1(0,2) - f1(4,6)) + (f1(8,10) - f1(12,14)))
-		return 2 * (1 + delta) >= abs(
-			(v1*f2(0,3,1,2)) + (v2*f2(4,7,5,6)) +
-			(v3*f2(8,11,9,10)) + (v4*f2(12,15,13,14)))
 
-	tests = [
-		signalling(0,1,4,5),
-		signalling(8,9,12,13),
-		signalling(0,2,8,10),
-		signalling(4,6,12,14),
-		equality(1,1,1,-1),
-		equality(1,1,-1,1),
-		equality(1,-1,1,1),
-		equality(-1,1,1,1)
-		]
 
-	print(tests)
+# execution
 
-record()
+constraints = [[ array([[0.5, 0], [0., 0.5]]), array([[0.5, 0], [0., 0.5]]) ],
+        [ array([[0.5, 0], [0., 0.5]]), array([[0, 0.5], [0.5, 0.]]) ]]
 
-print("--- %s seconds ---" % (time.time() - start_time))
+p = generate_global_distribution(constraints,5000)
+
+
+
+
+
+
+
+
+
+
+# testing
+
+
+print(p)
+
+A11 = (2 * (p[1] + p[2])) - 1
+A12 = (2 * (p[5] + p[6])) - 1
+A21 = (2 * (p[9] + p[10])) - 1
+A22 = (2 * (p[13] + p[14])) - 1
+B11 = (2 * (p[1] + p[3])) - 1
+B12 = (2 * (p[9] + p[11])) - 1
+B21 = (2 * (p[5] + p[7])) - 1
+B22 = (2 * (p[13] + p[15])) - 1
+delta = (abs(A11 - A12) + abs(A21 - A22) + abs(B11 - B21) + abs(B12 - B22))/2
+A11B11 = (p[1] + p[4]) - (p[2] + p[3])
+A12B12 = (p[5] + p[8]) - (p[6] + p[7])
+A21B21 = (p[9] + p[12]) - (p[10] + p[11])
+A22B22 = (p[13] + p[16]) - (p[14] + p[15])
+
+print("Normalization in contexts", [p[1]+p[2]+p[7]+p[8]])
+print("Normalization in contexts", [p[3]+p[4]+p[5]+p[6]])
+print("Normalization in contexts", [p[9]+p[10]+p[15]+p[16]])
+print("Normalization in contexts", [p[11]+p[12]+p[13]+p[14]])
+
+print("delta", delta)
+print("Potential violations")
+print(abs(A11B11 + A12B12 + A21B21 - A22B22), 2 * (1 + delta))
+print(abs(A11B11 + A12B12 - A21B21 + A22B22), 2 * (1 + delta))
+print(abs(A11B11 - A12B12 + A21B21 + A22B22), 2 * (1 + delta))
+print(abs(-A11B11 + A12B12 + A21B21 + A22B22), 2 * (1 + delta))
