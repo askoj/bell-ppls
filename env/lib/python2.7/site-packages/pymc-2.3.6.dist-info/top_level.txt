@@ -1,0 +1,7 @@
+pymc
+pymc/database
+pymc/examples
+pymc/examples/gp
+pymc/gp
+pymc/gp/cov_funs
+pymc/tests

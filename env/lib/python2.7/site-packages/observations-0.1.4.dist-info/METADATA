@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: observations
+Version: 0.1.4
+Summary: Tools for loading standard data sets in machine learning
+Home-page: https://github.com/edwardlib/observations
+Author: Dustin Tran
+Author-email: dustin@cs.columbia.edu
+License: Apache License 2.0
+Keywords: machine learning statistics data science deep education
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: six (>=1.10.0)
+Provides-Extra: data frames
+Requires-Dist: pandas; extra == 'data frames'
+Provides-Extra: miscellaneous
+Requires-Dist: scipy; extra == 'miscellaneous'
+Requires-Dist: requests; extra == 'miscellaneous'
+Requires-Dist: tqdm; extra == 'miscellaneous'
+Provides-Extra: networks
+Requires-Dist: networkx (<=1.9.1); extra == 'networks'
+
+UNKNOWN
+
+
