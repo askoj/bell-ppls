@@ -1,4 +1,4 @@
-name := "Scala_1"
+name := "p_figaro"
 
 version := "0.1"
 

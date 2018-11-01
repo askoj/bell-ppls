@@ -4,7 +4,7 @@
 		module="p_figaro-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20180605015308"
+		publication="20180911183453"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
@@ -33,6 +33,7 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.6" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.6" conf="scala-tool->default,optional(default);provided->default(compile)"/>
-		<dependency org="org.scala-sbt" name="sbt" rev="1.1.5" conf="provided->default(compile)"/>
+		<dependency org="org.scala-sbt" name="sbt" rev="1.2.1" conf="provided->default(compile)"/>
+		<override org="org.scala-sbt" module="scripted-plugin_2.12" matcher="exact" rev="1.2.1"/>
 	</dependencies>
 </ivy-module>
